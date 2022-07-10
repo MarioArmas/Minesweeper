@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+img {
+  height: 50px;
+  z-index: -10;
+}
+
+.cell {
+  cursor: pointer;
+  border: 1px #000 solid;
+  height: 50px;
+  width: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.flag {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/special-waving-flags/512/Red_triangular-512.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hide {
+  display: none;
+}
