@@ -1,11 +1,19 @@
 * {
   box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 img {
   height: 50px;
   z-index: -10;
+}
+
+p {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
 }
 
 .cell {
@@ -28,4 +36,8 @@ img {
 
 .hide {
   display: none;
+}
+
+.show {
+  background-color: #d3d3d3;
 }

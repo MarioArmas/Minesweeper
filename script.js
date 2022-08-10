@@ -96,6 +96,7 @@ function createCell(index) {
 
     if (e.target.children[0].innerText === '') {
       // TODO: show near cells
+      show(e.target.id)
     }
 
     if (e.target.classList.contains('mine')) {
@@ -142,6 +143,28 @@ function gameOver() {
 
 function rand(num) {
   return Math.floor(Math.random() * num)
+}
+
+function show(stringId) {
+  console.log('works')
+  const id = parseInt(stringId)
+  const el = document.getElementById(id)
+
+  if (el.children[0].classList.contains('show')) return
+
+  el.children[0].classList.remove('hide')
+  el.children[0].classList.add('show')
+
+  if (el.children[0].innerText === '') {
+    show(id + 1)
+    show(id - 1)
+    show(id + 10)
+    show(id - 10)
+    show(id + 11)
+    show(id - 11)
+    show(id + 9)
+    show(id - 9)
+  }
 }
 
 createMap()
